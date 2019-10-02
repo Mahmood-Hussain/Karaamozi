@@ -12,3 +12,7 @@ This is an internship portal where you can post and apply for internships
 1. Clone the repo into your htdocs or www or whatever you're using.
 2. Create database named as "karaamozi"
 3. Import karaamozi.sql into above created database you are good to go!
+
+
+Youtube:
+https://youtu.be/3uyKuixeDWU

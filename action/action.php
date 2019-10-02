@@ -239,26 +239,3 @@ if (isset($_POST['shortlist']) || isset($_POST['in_touch'])  || isset($_POST['se
     }
 }
 
-//code for update goes here jus calling the update function
-if (isset($_POST['update'])) {
-    $id = $_POST["id"];
-    $where = array("id" => $id);
-    $myArray = array(
-        "medicine_name" => strip_tags(trim($_POST['name'])),
-        "quantity" => strip_tags(trim($_POST['quantity']))
-    );
-    if ($obj->update("medicines", $where, $myArray)) {
-        header("location:index.php?msg=Updated");
-    }
-}
-
-//code for Delete goes here jus calling the delete function
-if (isset($_GET['delete'])) {
-    if (isset($_GET["id"])) {  // check if the id id attached with url or not
-        $id = $_GET["id"];
-        $where = array("id" => $id);
-        if ($obj->delete("medicines", $where)) {
-            header("location:index.php?msg=Deleted");
-        }
-    }
-}
